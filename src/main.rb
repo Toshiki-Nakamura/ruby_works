@@ -1,44 +1,22 @@
-greet = "\033[35mHello, my first ruby program\033[0m"
-puts greet
-puts
+require "./MegaGreeter.rb"
 
-puts "======= String ======="
-string = "tnakamur"
+puts '==== mg = MegaGreeter.new(["a", "b"])'
+mg = MegaGreeter.new(["a", "b"])
+mg.hi
 
-puts "string: "
-puts string
-puts "string.index('a'): "
-puts string.index("a")
-puts "string.length: "
-puts string.length
-puts "string.class:"
-puts string.class
+puts '==== mg.names = ["andy", "bob", "charly", "daisy"]'
+mg.names = ["andy", "bob", "charly", "daisy"]
+mg.hi
+mg.say_bye
 
-puts "======= Int Array ======="
-arr = [42, 21, 90, 24]
-puts "arr: "
-print arr
-puts
+puts '==== mg2 = MegaGreeter.new'
+mg2 = MegaGreeter.new
+mg2.hi
+mg2.say_bye
 
-sorted_arr = arr.sort
-puts "after sort:"
-print sorted_arr
-puts
+puts '==== mg3 = MegaGreeter.new(nil)'
+mg3 = MegaGreeter.new(nil)
+mg3.hi
+mg3.say_bye
 
-puts "======= HASH ======="
-hash = { "name" => string, 42 => "tokyo", "lvl" => 6.24 }
-print hash
-puts
-puts "hash[42]: "
-puts hash[42]
-puts "hash[name]: "
-puts hash["name"]
-puts "hash[lvl]: "
-puts hash["lvl"]
-
-puts "\n--- hash.values --- "
-puts hash.values
-puts "\n-------hash[:skil] = 'C/C++/Docker'------ "
-hash[:skill] = "C/C++/Docker"
-puts hash.values
-
+# ruby main.rb
