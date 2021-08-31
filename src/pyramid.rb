@@ -17,3 +17,10 @@ triangle = n * (n + 1) / 2
 print "\n nums: " 
 
 puts triangle
+
+# [n = 4]
+#    *
+#   * *
+#  * * *
+# * * * *
+# nums: 10
